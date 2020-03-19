@@ -31,10 +31,10 @@ else()
     endif()
 
     if(CMAKE_VERSION VERSION_LESS 3.1)
-        set(CMAKE_CXX_FLAGS "-std=c++14 ${CMAKE_CXX_FLAGS}")
+        set(CMAKE_CXX_FLAGS "-std=c++2a ${CMAKE_CXX_FLAGS}")
     else()
       if(NOT DEFINED CMAKE_CXX_STANDARD OR CMAKE_CXX_STANDARD STREQUAL "98")
-        set(CMAKE_CXX_STANDARD 14)
+        set(CMAKE_CXX_STANDARD 20)
       endif()
 
       if(CMAKE_CXX_STANDARD GREATER 14)
